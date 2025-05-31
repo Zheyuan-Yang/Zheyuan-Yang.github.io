@@ -16,3 +16,7 @@ Our prototype demonstrates the feasibility of combining SLAM with Visual Languag
 
 # Our Design
 ![](images/llm_cane_block_diagram.png)
+
+# Demo of indoor navigation
+
+{% bilicard2 BV1dY7MzCEiu %}
