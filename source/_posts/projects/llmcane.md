@@ -1,5 +1,7 @@
 ---
 title: LLM Cane — An Intelligent Navigation Tool for visually impaired people
+date: 2025-05-27 10:30:00
+categories: projects
 ---
 
 # Executive Summary
@@ -13,3 +15,4 @@ After six months of intensive development, we successfully produced an LLM Cane 
 Our prototype demonstrates the feasibility of combining SLAM with Visual Language Models to assist visually impaired users to navigate complex environments, achieving real-time obstacle avoidance and natural language pathfinding. Additionally, it is also equipped with visual questioning and answering to assist users in understanding the environment nearby.
 
 # Our Design
+![](images/llm_cane_block_diagram.png)

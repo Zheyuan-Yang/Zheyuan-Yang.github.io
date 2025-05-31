@@ -40,7 +40,10 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
@@ -101,4 +104,6 @@ theme: particlex
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  - type: git
+    repo: git@github.com:Zheyuan-Yang/Zheyuan-Yang.github.io.git
+    branch: main
