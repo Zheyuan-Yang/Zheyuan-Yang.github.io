@@ -106,4 +106,4 @@ theme: cube
 deploy:
   - type: git
     repo: https://github.com/Zheyuan-Yang/Zheyuan-Yang.github.io.git
-    branch: gh-pages  # Deploy to gh-pages branch for GitHub Pages
+    branch: dev
