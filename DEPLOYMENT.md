@@ -236,4 +236,10 @@ url: https://zheyuan-yang.github.io
 
 ---
 
-**Need Help?** Open an issue in the repository with details about your problem.
+**Need Help?** If you encounter issues not covered in the troubleshooting section:
+1. Check the [GitHub Actions workflow runs](https://github.com/Zheyuan-Yang/Zheyuan-Yang.github.io/actions) for error details
+2. [Open an issue](https://github.com/Zheyuan-Yang/Zheyuan-Yang.github.io/issues/new) with:
+   - Description of the problem
+   - Steps to reproduce
+   - Error messages or screenshots
+   - Your environment (OS, Node.js version, etc.)
