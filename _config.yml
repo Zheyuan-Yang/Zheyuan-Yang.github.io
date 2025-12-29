@@ -104,6 +104,6 @@ theme: cube
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: https://github.com/Zheyuan-Yang/Zheyuan-Yang.github.io.git
-  branch: gh-pages  # Deploy to gh-pages branch for GitHub Pages
+  - type: git
+    repo: https://github.com/Zheyuan-Yang/Zheyuan-Yang.github.io.git
+    branch: gh-pages  # Deploy to gh-pages branch for GitHub Pages
