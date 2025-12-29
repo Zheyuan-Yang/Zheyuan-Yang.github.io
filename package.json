@@ -28,5 +28,8 @@
     "hexo-tag-bili": "^1.0.0",
     "hexo-tag-bilibili": "^0.3.1",
     "hexo-theme-landscape": "^1.0.0"
+  },
+  "overrides": {
+    "strip-ansi": "^6.0.1"
   }
 }
