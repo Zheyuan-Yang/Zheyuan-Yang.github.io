@@ -1,5 +1,19 @@
+<%
+let headerBackground = theme.header && theme.header.background ? theme.header.background : null;
+let headerBackgroundSrc = url_for('images/background.png');
+
+if (headerBackground) {
+    const headerBackgroundIsUrl = /https?:\/\//.test(headerBackground);
+    const headerBackgroundIsRootPath = headerBackground.startsWith('/');
+    headerBackgroundSrc = headerBackgroundIsUrl
+        ? headerBackground
+        : headerBackgroundIsRootPath
+            ? url_for(headerBackground)
+            : url_for(`images/${headerBackground}`);
+}
+%>
 <header class="cube-header" id="cube-header" <% if (!is_home()) { %> style="display: none;" <% } %>>
-    <img src="<% if(theme.header.background) { %> <%= theme.header.background %> <% } else { %> <%- url_for('images/background.png') %> <% } %>" alt="头部背景图片">
+    <img src="<%= headerBackgroundSrc %>" alt="头部背景图片">
     <% if (theme.header.title) { %>
     <div class="cube-type">
         <span class="cube-typed-title"><%= theme.header.title %></span>

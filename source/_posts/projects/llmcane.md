@@ -15,7 +15,7 @@ After six months of intensive development, we successfully produced an LLM Cane 
 Our prototype demonstrates the feasibility of combining SLAM with Visual Language Models to assist visually impaired users to navigate complex environments, achieving real-time obstacle avoidance and natural language pathfinding. Additionally, it is also equipped with visual questioning and answering to assist users in understanding the environment nearby.
 
 # Our Design
-![](images/llm_cane_block_diagram.png)
+![](/images/llm_cane_block_diagram.png)
 
 # Demo of indoor navigation
 

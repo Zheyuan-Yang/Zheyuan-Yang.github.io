@@ -2,7 +2,7 @@ theme: cube
 
 # background display for mobile, not for pc
 header:
-  background: gemini.png
+  background: bg.jpg
   # both pc and mobile required title(make it the same as your hexo site _config.yml's title)
   title: sudo apt remove hatsune-miku
   # subtitle for mobile header
@@ -11,18 +11,18 @@ header:
 # background display for pc
 # you can use url or path relative
 # `background: background.png` refers to the path "source/images/background.png"
-background: gemini.png
+background: bg.jpg
 
 
 # the background image width and height (you can see your image file to get them)
-width: 2000
-height: 1414
+width: 3840
+height: 1500
 
 
 # this variable is used to locate your background
 # for example, if you want to locate display your background from top
 # you just need to type it: position: 0
-position: 400
+position: 0
 
 
 # this variable is used to make the background header being fuzzy
@@ -58,12 +58,12 @@ menu:
 sidebar:
   links:
     - title: GitHub
-      url: https://github.com/ZEROKISEKI
+      url: https://github.com/Zheyuan-Yang
       # icon can be url or path
       icon: http://cube-1252774894.cosgz.myqcloud.com/links/GitHub.png
-    # - title: Coding
-    #   url: https://coding.net/u/SORA1
-    #   icon: http://cube-1252774894.cosgz.myqcloud.com/links/Coding.png
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/zheyuan-yang-419064225/
+      icon: linkedin-130.png
     # - title: SF社区
     #   url: https://segmentfault.com/u/aonosora
     #   icon: http://cube-1252774894.cosgz.myqcloud.com/links/SF.png
@@ -98,6 +98,9 @@ widgets:
 # then you should install hexo-generator-json-content
 # run `npm install hexo-generator-json-content -save` (in your hexo directory)
 search: true
+
+# Home page auto excerpt length when a post does not define `<!-- more -->`
+excerpt_length: 280
 
 # supported by DIYgod awesome project APlayer, you can find more on https://github.com/MoePlayer/APlayer
 # and you can see the doc on https://aplayer.js.org/docs/#/

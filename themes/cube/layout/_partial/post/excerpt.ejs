@@ -1,3 +1,41 @@
+<%
+function decodeEntities(text) {
+    const entities = {
+        "&nbsp;": " ",
+        "&amp;": "&",
+        "&lt;": "<",
+        "&gt;": ">",
+        "&#39;": "'",
+        "&quot;": "\""
+    };
+
+    return text.replace(/&(nbsp|amp|lt|gt|#39|quot);/g, function (match) {
+        return entities[match] || match;
+    });
+}
+
+function toPlainText(html) {
+    return decodeEntities(
+        String(html || "")
+            .replace(/<style[\s\S]*?<\/style>/gi, " ")
+            .replace(/<script[\s\S]*?<\/script>/gi, " ")
+            .replace(/<[^>]+>/g, " ")
+    )
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+let excerptLength = Number(theme.excerpt_length);
+if (!Number.isFinite(excerptLength) || excerptLength < 0) {
+    excerptLength = 280;
+}
+
+const autoExcerptSource = typeof item.description !== "undefined" ? item.description : item.content;
+const autoExcerptText = toPlainText(autoExcerptSource);
+const autoExcerpt = excerptLength > 0 && autoExcerptText.length > excerptLength
+    ? `${autoExcerptText.slice(0, excerptLength).trim()}...`
+    : autoExcerptText;
+%>
 <div class="cube-excerpt" id="cube-excerpt-<%= item.title %>">
     <header class="cube-excerpt-header">
         <h1><a href="<%- url_for(item.path) %>"><%= item.title %></a></h1>
@@ -19,7 +57,7 @@
         <% if (item.excerpt) { %>
            <%- item.excerpt %>
         <% } else { %>
-           <%- item.content %>
+           <p><%= autoExcerpt %></p>
         <% } %>
     </article>
     <footer class="cube-excerpt-footer">
