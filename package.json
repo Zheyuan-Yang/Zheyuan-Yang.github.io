@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "postinstall": "patch-package",
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
@@ -31,5 +32,8 @@
   },
   "overrides": {
     "strip-ansi": "^6.0.1"
+  },
+  "devDependencies": {
+    "patch-package": "^8.0.1"
   }
 }
